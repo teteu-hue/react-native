@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     textHome: {
         textAlign: 'center',
         fontSize: 16,
-        fontFamily: 'Montserrat'
+        
     }
 });
 

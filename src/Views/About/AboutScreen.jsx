@@ -1,8 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
-import { ButtonNavigate } from "../components/Screen/botao-navigate";
+import { View, Text, StyleSheet } from "react-native";
+import { ButtonNavigate } from "../../components/Screen/buttonNavigate";
 
-const AboutScreen = ({ navigation }) => {
+const AboutScreen = () => {
     return (
         <View style={styles.container}>
             <Text>About Screen</Text>

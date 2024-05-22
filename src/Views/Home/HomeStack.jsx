@@ -1,21 +1,20 @@
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
-import { HomeText } from './HomeText';
-import { ButtonNavigate } from '../../components/Screen/buttonNavigate';
 
-const HomeScreen = () => {
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { HomeScreen } from './HomeScreen';
+import { AboutScreen } from '../About/AboutScreen';
+
+const Stack = createNativeStackNavigator();
+
+const HomeStack = () => {
 
     return (
-        <View style={styles.container}>
-            <Image
-                source={{
-                    uri: 'https://reactnative.dev/docs/assets/p_cat1.png'
-                }}
-                style={styles.logo}
-            />
-            <HomeText/>
-            <ButtonNavigate page='About' textButton="About" />
-        </View>
+        <Stack.Navigator>
+            <Stack.Screen name="Home" component={HomeScreen}/>
+            <Stack.Screen name="About" component={AboutScreen}/>
+        </Stack.Navigator>
+        
     );
 
 };
@@ -43,4 +42,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export { HomeScreen };
+export { HomeStack };
