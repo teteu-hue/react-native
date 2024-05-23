@@ -13,6 +13,7 @@ export function RootNavigation() {
         <NavigationContainer>
 
             <Tab.Navigator
+                initialRouteName="Home"
 
                 screenOptions={
 
@@ -22,14 +23,14 @@ export function RootNavigation() {
                         tabBarIcon: ({ focused, color, size }) => {
                             let iconName;
 
-                            if (route.name === 'HomeStack') {
+                            if (route.name === 'Home') {
                                 iconName = focused
                                     ? 'home'
                                     : 'home-outline';
-                            } else if (route.name === 'AboutStack') {
-                                iconName = focused ? 'alert-circle' : 'alert-circle-outline';
-                            } else if (route.name === 'SettingsStack') {
-                                iconName = focused ? 'settings' : 'settings-outline';
+                            } else if (route.name === 'Settings') {
+                                iconName = focused 
+                                    ? 'settings' 
+                                    : 'settings-outline';
                             }
 
                             return <Ionicons name={iconName} size={size} color={color} />
@@ -43,8 +44,8 @@ export function RootNavigation() {
 
             >
 
-                <Tab.Screen name="HomeStack" component={HomeStack} />
-                <Tab.Screen name="SettingsStack" component={SettingsStack} />
+                <Tab.Screen name="Home" component={HomeStack} />
+                <Tab.Screen name="Settings" component={SettingsStack} />
 
             </Tab.Navigator>
 

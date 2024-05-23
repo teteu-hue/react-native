@@ -14,7 +14,6 @@ const HomeScreen = () => {
                 style={styles.logo}
             />
             <HomeText/>
-            <ButtonNavigate page='About' textButton="About" />
         </View>
     );
 

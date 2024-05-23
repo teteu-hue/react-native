@@ -1,18 +1,31 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { StyleSheet, Pressable, Text } from 'react-native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from './HomeScreen';
-import { AboutScreen } from '../About/AboutScreen';
+import { useNavigation } from '@react-navigation/native';
 
 const Stack = createNativeStackNavigator();
 
 const HomeStack = () => {
 
+    const navigation = useNavigation();
+
     return (
         <Stack.Navigator>
-            <Stack.Screen name="Home" component={HomeScreen}/>
-            <Stack.Screen name="About" component={AboutScreen}/>
+            <Stack.Screen name="Home" component={HomeScreen} 
+                options={{
+                    headerRight: () => (
+                        <Pressable onPress={() => navigation.navigate('About') }>
+                            <Text>
+                                Sobre nós
+                            </Text>
+                        </Pressable>
+                    )
+                }}
+             />
+
+
         </Stack.Navigator>
         
     );
