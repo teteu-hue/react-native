@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { HomeText } from './HomeText';
-import { ButtonNavigate } from '../../components/Screen/buttonNavigate';
+import { ButtonNavigate } from '../../components/Screen/ButtonNavigate';
 
 const HomeScreen = () => {
 

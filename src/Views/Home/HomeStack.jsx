@@ -4,6 +4,8 @@ import { StyleSheet, Pressable, Text } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from './HomeScreen';
 import { useNavigation } from '@react-navigation/native';
+import { HeaderButton } from './components/HeaderButton';
+import { AboutScreen } from '../About/AboutScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,16 +18,12 @@ const HomeStack = () => {
             <Stack.Screen name="Home" component={HomeScreen} 
                 options={{
                     headerRight: () => (
-                        <Pressable onPress={() => navigation.navigate('About') }>
-                            <Text>
-                                Sobre nós
-                            </Text>
-                        </Pressable>
+                        <HeaderButton page="About" text="Sobre nós"></HeaderButton>
                     )
                 }}
              />
 
-
+            <Stack.Screen name="About" component={AboutScreen} />
         </Stack.Navigator>
         
     );

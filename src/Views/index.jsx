@@ -2,8 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { HomeStack } from './Home/HomeStack';
-
-import { SettingsStack } from './Settings/SettingsStack';
+import { ProfileStack } from './Profile/ProfileStack.jsx';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,10 +26,10 @@ export function RootNavigation() {
                                 iconName = focused
                                     ? 'home'
                                     : 'home-outline';
-                            } else if (route.name === 'Settings') {
+                            } else if (route.name === 'Perfil') {
                                 iconName = focused 
-                                    ? 'settings' 
-                                    : 'settings-outline';
+                                    ? 'person' 
+                                    : 'person-outline';
                             }
 
                             return <Ionicons name={iconName} size={size} color={color} />
@@ -43,10 +42,8 @@ export function RootNavigation() {
                 } 
 
             >
-
                 <Tab.Screen name="Home" component={HomeStack} />
-                <Tab.Screen name="Settings" component={SettingsStack} />
-
+                <Tab.Screen name="Perfil" component={ProfileStack} />
             </Tab.Navigator>
 
         </NavigationContainer>

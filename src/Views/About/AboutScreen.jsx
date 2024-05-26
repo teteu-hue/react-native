@@ -1,12 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { ButtonNavigate } from "../../components/Screen/buttonNavigate";
+import { ButtonNavigate } from "../../components/Screen/ButtonNavigate";
 
 const AboutScreen = () => {
     return (
         <View style={styles.container}>
             <Text>About Screen</Text>
-            <ButtonNavigate page="Home" textButton="Home"/>
         </View>
     );
 };

@@ -10,7 +10,6 @@ export const SettingsStack = () => {
     return (
         <Stack.Navigator>
             <Stack.Screen name="Settings" component={SettingsScreen} />
-            <Stack.Screen name="About" component={AboutScreen} />
         </Stack.Navigator>
     );
 };

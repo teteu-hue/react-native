@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { ButtonNavigate } from '../../components/Screen/buttonNavigate';
+import { ButtonNavigate } from '../../components/Screen/ButtonNavigate';
 
 export const SettingsScreen = () => {
     return (
@@ -8,7 +8,6 @@ export const SettingsScreen = () => {
             <Text style={styles.textHome}>
                 Settings!
             </Text>
-                <ButtonNavigate page="About" textButton="About" />
         </View>
     );
 };
