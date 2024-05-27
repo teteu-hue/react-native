@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         marginBottom: 150
     },
     textPrincipal: {
-        fontFamily: 'Inter-Light',
+        fontFamily: 'Inter-Medium',
         fontSize: 48
     }
 });
