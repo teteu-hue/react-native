@@ -1,24 +1,25 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { useFonts } from 'expo-font';
+import { SingInTitle } from './components/SingInTitle';
+import { SingInText } from './components/SingInText';
 
 export const SingInScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.titleView}>
-                <View style={styles.textView}>
-                    <Text style={styles.textPrincipal}>FoundCare</Text>
-                </View>
+                <SingInTitle />
             </View>
             <View style={styles.titleView}>
-                <Text>SingIn</Text>
+                <SingInText />
+            </View>
+            <View style={styles.titleView}>
             </View>
         </View>
-     );
+    );
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
@@ -28,14 +29,7 @@ const styles = StyleSheet.create({
     },
     titleView: {
         flex: 1,
-        justifyContent: 'center'
-        
-    },
-    textView: {
-        marginBottom: 150
-    },
-    textPrincipal: {
-        fontFamily: 'Inter-Medium',
-        fontSize: 48
+        justifyContent: 'center',
+        height: '50%',
     }
 });
