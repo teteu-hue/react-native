@@ -14,6 +14,7 @@ const HomeScreen = () => {
                 style={styles.logo}
             />
             <HomeText/>
+            <ButtonNavigate page="SingIn" textButton="SingIn"/>
         </View>
     );
 

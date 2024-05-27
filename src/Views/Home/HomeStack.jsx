@@ -6,6 +6,7 @@ import { HomeScreen } from './HomeScreen';
 import { useNavigation } from '@react-navigation/native';
 import { HeaderButton } from './components/HeaderButton';
 import { AboutScreen } from '../About/AboutScreen';
+import { SingInScreen } from '../SingIn/SingInScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,7 +23,7 @@ const HomeStack = () => {
                     )
                 }}
              />
-
+            <Stack.Screen name="SingIn" component={SingInScreen}/>
             <Stack.Screen name="About" component={AboutScreen} />
         </Stack.Navigator>
         
